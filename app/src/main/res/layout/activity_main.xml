@@ -1,95 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Question 1: What is Your name?"
-        android:textSize="20dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp"></TextView>
-
-    <EditText
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="write your name here"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp"
-        android:id="@+id/write_your_name_edit_text_view"></EditText>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Question 2: Is USA a country?"
-        android:textSize="20dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp"></TextView>
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp">
-        <RadioButton
-            android:onClick="yesRadioButtonCLicked"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="yes"
-            android:textAppearance="?android:textAppearanceMedium" />
-        <RadioButton
-            android:onClick="noRadioButtonCLicked"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="Question 1: What is Your name?"
+            android:textSize="20dp"></TextView>
+
+        <EditText
+            android:id="@+id/write_your_name_edit_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="write your name here"></EditText>
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="no"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="Question 2: Is USA a country?"
+            android:textSize="20dp"></TextView>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="yesRadioButtonCLicked"
+                android:text="yes"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="noRadioButtonCLicked"
+                android:text="no"
+                android:textAppearance="?android:textAppearanceMedium" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="Question 3: Write the name of a very famous physicist, whose surname was Einstein"
+            android:textSize="20dp"></TextView>
+
+        <EditText
+            android:id="@+id/einsteins_name_edit_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"></EditText>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="Question 4: Check the box if the statement is true:"
+            android:textSize="20dp"></TextView>
+
+        <CheckBox
+            android:id="@+id/do_we_live_on_the_earth_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="We live on the Earth"
             android:textAppearance="?android:textAppearanceMedium" />
-    </RadioGroup>
+        <CheckBox
+            android:id="@+id/cats_eat_mice_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Cats eat mice"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:textAppearance="?android:textAppearanceMedium"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Question 3: Write the name of a very famous physicist, whose surname was Einstein"
-        android:textSize="20dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp"></TextView>
+        <CheckBox
+            android:id="@+id/cows_eat_meat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cows eat meat"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:textAppearance="?android:textAppearanceMedium"/>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp"
-        android:id="@+id/einsteins_name_edit_text_view"></EditText>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Question 4: Check the box if the statement is true:"
-        android:textSize="20dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp"></TextView>
-
-    <CheckBox
-        android:id="@+id/do_we_live_on_the_earth_checkbox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="We live on the Earth"
-        android:onClick="checkBoxIsClicked"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="Submit the answers"
-        android:onClick="submitTheAnswerButton"></Button>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="submitTheAnswerButton"
+            android:text="Submit the answers"/>
 
 
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
